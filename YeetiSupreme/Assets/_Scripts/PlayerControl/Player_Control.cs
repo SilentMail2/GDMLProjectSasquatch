@@ -48,7 +48,7 @@ public class Player_Control : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
-        ObjectPool = GameObject.FindGameObjectWithTag("ObjectPool");
+        ObjectPool = GameObject.Find("ObjectPool");
         playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         EquipGun(weapon);
         targetCursor = GameObject.Find("CrossHair");
