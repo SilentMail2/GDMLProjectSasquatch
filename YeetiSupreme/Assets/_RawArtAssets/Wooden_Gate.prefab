@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 5692334689390344715}
   - component: {fileID: 3604242454929204120}
   - component: {fileID: 2109439708013699965}
+  - component: {fileID: 8777376938642033601}
+  - component: {fileID: 7565707369321606898}
   m_Layer: 0
   m_Name: Wooden_Gate_L
   m_TagString: Untagged
@@ -109,6 +111,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8777376938642033601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5556335281625123299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5ebf3a9d71f4f44b40224164220051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!208 &7565707369321606898
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5556335281625123299}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 4.6010003, y: 11.729, z: 7.9110003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -3.015, y: 0.614, z: 5.9620004}
+  m_TimeToStationary: 0.5
 --- !u!1 &8300971130706902581
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +150,8 @@ GameObject:
   - component: {fileID: 8594323936213365355}
   - component: {fileID: 3656484317240237673}
   - component: {fileID: 5269137914141065062}
+  - component: {fileID: 8777376938642033602}
+  - component: {fileID: 8139459310334116550}
   m_Layer: 0
   m_Name: Wooden_Gate_R
   m_TagString: Untagged
@@ -186,3 +218,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8777376938642033602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300971130706902581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5ebf3a9d71f4f44b40224164220051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!208 &8139459310334116550
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300971130706902581}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 4.6010003, y: 11.729, z: 7.9110003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -3.015, y: 0.614, z: 5.9620004}
+  m_TimeToStationary: 0.5

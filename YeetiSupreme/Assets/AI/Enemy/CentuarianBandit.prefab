@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 1174320638281385013}
   - component: {fileID: 7069545230235608272}
   - component: {fileID: 6247398374038808924}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CentuarianBandit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,6 +108,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5538496990403187192}
+  - {fileID: 8103882906646535086}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -124,16 +125,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navPoints: []
-  agent: {fileID: 0}
+  agent: {fileID: 7069545230235608272}
   healthPoints: 0
-  lookRadius: 10
+  lookRadius: 28.95
   target: {fileID: 0}
   seesPlayer: 0
-  bullet: {fileID: 0}
-  barrelPoint: {fileID: 0}
-  bulletTime: 0
-  timeBullet: 0
-  timeTaken: 0
+  bullet: {fileID: 5126255105988041018, guid: d34f73e3168af9444b805932e7be0f7a, type: 3}
+  barrelPoint: {fileID: 8103882906646535086}
+  bulletTime: 1
+  timeBullet: 1
+  timeTaken: 1
   navLength: 0
 --- !u!195 &7069545230235608272
 NavMeshAgent:
@@ -176,3 +177,33 @@ MonoBehaviour:
   quest: {fileID: 0}
   healthBar: {fileID: 0}
   drop: []
+--- !u!1 &7307492372888997145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8103882906646535086}
+  m_Layer: 11
+  m_Name: BarrelEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8103882906646535086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7307492372888997145}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5538496990403187198}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

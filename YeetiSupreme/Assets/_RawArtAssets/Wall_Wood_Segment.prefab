@@ -15,8 +15,8 @@ GameObject:
   m_Name: Wall_Wood_Segment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8546814550555262856
 Transform:
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3674683315906221121}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 198.92432, y: 26.98, z: 308.0066}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: -1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

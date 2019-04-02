@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4381035443862980489
 Transform:
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404126870030177210}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 235.02977, y: 25.240807, z: 343.9666}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1b39921db0916de41ae469b3ee88d020, type: 3}
+  - {fileID: 2100000, guid: e41fc8d0a3b56d645b673adff8583852, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 7491175942498987399}
   - component: {fileID: 6568581382646172939}
   - component: {fileID: 7023886595009852569}
+  - component: {fileID: 835508272963510386}
   m_Layer: 0
   m_Name: Gate_Stone
   m_TagString: Untagged
@@ -135,7 +136,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1b39921db0916de41ae469b3ee88d020, type: 3}
+  - {fileID: 2100000, guid: df67258ae02b5684da12130273742c6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,3 +156,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!208 &835508272963510386
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076076836897766605}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.7720001, y: 11.477, z: 6.0000005}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.259, z: 0}
+  m_TimeToStationary: 0.5

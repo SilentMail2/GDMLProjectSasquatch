@@ -64,11 +64,11 @@ public class HealthScript : MonoBehaviour
             if (!isPlayer)
             {
                 int randomDrop = (Random.Range(0, (drop.Length)));
-                if (randomDrop > drop.Length)
+                if (randomDrop > drop.Length || drop.Length == 0)
                 {
                     Destroy(this.gameObject);
                 }
-                else
+                else if (drop.Length>0)
                 {
                     Instantiate(drop[randomDrop], transform.position, transform.rotation);
                     Destroy(this.gameObject);
