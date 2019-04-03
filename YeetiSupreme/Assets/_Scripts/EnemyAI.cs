@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
     {
 
         float distance = Vector3.Distance(target.position, transform.position);
-        if (!target.GetComponent<Player_Control>().inDialogue)
+        if (!target.GetComponent<Player_Control>().inDialogue && !target.GetComponent<Player_Control>().isDiguise)
         {
             if (distance <= lookRadius)
             {

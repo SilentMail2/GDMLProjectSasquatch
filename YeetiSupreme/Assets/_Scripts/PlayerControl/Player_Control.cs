@@ -14,6 +14,7 @@ public class Player_Control : MonoBehaviour
     [SerializeField] private GameObject playerCamera;
     [SerializeField] private Vector3 camPos;
     [SerializeField] private CharacterController cc;
+    public bool isDiguise = false;
     [Space(10)]
     [Header("Weapon")]
     [SerializeField] private GameObject ObjectPool;
@@ -27,6 +28,7 @@ public class Player_Control : MonoBehaviour
     [SerializeField] private PickUp pickUpScript;
     [SerializeField] private GameObject equppedWeapon;
     [SerializeField] GameObject unarmedObject;
+    
     public bool unarmedReady;
 
 

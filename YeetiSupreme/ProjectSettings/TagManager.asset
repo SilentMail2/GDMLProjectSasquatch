@@ -9,6 +9,7 @@ TagManager:
   - pickup
   - PlayersGun
   - ammoUI
+  - NPC
   layers:
   - Default
   - TransparentFX

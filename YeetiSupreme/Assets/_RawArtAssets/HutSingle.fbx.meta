@@ -13,6 +13,15 @@ ModelImporter:
     100014: Lamp.002
     100016: Lamp.003
     100018: Lamp.004
+    100020: node_id10
+    100022: node_id12
+    100024: node_id14
+    100026: node_id15
+    100028: node_id4
+    100030: node_id5
+    100032: node_id6
+    100034: node_id7
+    100036: node_id8
     400000: Camera
     400002: Cylinder
     400004: Cylinder.001
@@ -23,18 +32,39 @@ ModelImporter:
     400014: Lamp.002
     400016: Lamp.003
     400018: Lamp.004
+    400020: node_id10
+    400022: node_id12
+    400024: node_id14
+    400026: node_id15
+    400028: node_id4
+    400030: node_id5
+    400032: node_id6
+    400034: node_id7
+    400036: node_id8
     2000000: Camera
     2100000: Material.001
     2100002: No Name
+    2100004: Material_33
+    2100006: Material_34
+    2100008: Material_35
     2300000: Cylinder
     2300002: Cylinder.001
     2300004: Cylinder.002
+    2300006: node_id10
+    2300008: node_id12
+    2300010: node_id8
     3300000: Cylinder
     3300002: Cylinder.001
     3300004: Cylinder.002
+    3300006: node_id10
+    3300008: node_id12
+    3300010: node_id8
     4300000: Cylinder.002
     4300002: Cylinder
     4300004: Cylinder.001
+    4300006: node_id8
+    4300008: node_id10
+    4300010: node_id12
     10800000: Lamp
     10800002: Lamp.001
     10800004: Lamp.002
