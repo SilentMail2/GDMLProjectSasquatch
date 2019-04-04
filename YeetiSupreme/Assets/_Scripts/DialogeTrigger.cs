@@ -18,16 +18,19 @@ public class DialogeTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (!automaticTrigger)
+            if (!dialogueGiven)
             {
-                EtoTalk.SetActive(true);
+                if (!automaticTrigger)
+                {
+                    EtoTalk.SetActive(true);
 
-            }
-            if (automaticTrigger)
-            {
-                Fungus.Flowchart.BroadcastFungusMessage(message);
-                other.GetComponent<Player_Control>().inDialogue = true;
-                Debug.Log("Lets Talk");//TriggerDialogue();
+                }
+                if (automaticTrigger)
+                {
+                    Fungus.Flowchart.BroadcastFungusMessage(message);
+                    other.GetComponent<Player_Control>().inDialogue = true;
+                    Debug.Log("Lets Talk");//TriggerDialogue();
+                }
             }
         }
         
@@ -35,19 +38,22 @@ public class DialogeTrigger : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player")
+        if (!dialogueGiven)
         {
-            if (!automaticTrigger)
+            if (other.tag == "Player")
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (!automaticTrigger)
                 {
-                    EtoTalk.SetActive(false);
-                    Fungus.Flowchart.BroadcastFungusMessage(message);
-                    other.GetComponent<Player_Control>().inDialogue = true;
-                    Debug.Log("Lets Talk");//TriggerDialogue();
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        EtoTalk.SetActive(false);
+                        Fungus.Flowchart.BroadcastFungusMessage(message);
+                        other.GetComponent<Player_Control>().inDialogue = true;
+                        Debug.Log("Lets Talk");//TriggerDialogue();
+                    }
                 }
-            }
 
+            }
         }
     }
     
@@ -60,6 +66,7 @@ public class DialogeTrigger : MonoBehaviour
     }
     public void EndConversation()
     {
+        dialogueGiven = true;
       //  flowChart.gameObject.SetActive(false);
     }
     public void DisableBlock()

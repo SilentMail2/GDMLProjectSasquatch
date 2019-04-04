@@ -240,4 +240,8 @@ public class Player_Control : MonoBehaviour
     {
         inDialogue = false;
     }
+    public void DialoguEnter()
+    {
+        inDialogue = true;
+    }
 }

@@ -17,6 +17,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float timeBullet;
     [SerializeField] float timeTaken;
     [SerializeField] int navLength;
+    [SerializeField] Transform[] moveToStory;
+    [SerializeField] bool movingToPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        MoveToPosition();
         float distance = Vector3.Distance(target.position, transform.position);
         if (!target.GetComponent<Player_Control>().inDialogue && !target.GetComponent<Player_Control>().isDiguise)
         {
@@ -107,5 +109,21 @@ public class EnemyAI : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+    public void MoveToPosition()
+    {
+        if (movingToPosition)
+        {
+            agent.SetDestination(moveToStory[0].position);
+            if (this.transform.position == moveToStory[0].position)
+            {
+                movingToPosition = false;
+            }
+
+        }
+    }
+    public void StartWalk()
+    {
+        movingToPosition = true;
     }
 }

@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class AutoMoverScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Rotate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        this.transform.rotation = new Quaternion (0, 90, 0, 0);
     }
 }
