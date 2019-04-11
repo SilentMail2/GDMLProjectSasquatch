@@ -15,6 +15,7 @@ public class Player_Control : MonoBehaviour
     [SerializeField] private Vector3 camPos;
     [SerializeField] private CharacterController cc;
     public bool isDiguise = false;
+    [SerializeField] GameObject Diguise;
     [Space(10)]
     [Header("Weapon")]
     [SerializeField] private GameObject ObjectPool;
@@ -34,7 +35,7 @@ public class Player_Control : MonoBehaviour
 
     [SerializeField] GameObject targetCursor;
 
-
+    public int explosiveJelly;
    
     private enum WeaponType
     {
@@ -60,6 +61,14 @@ public class Player_Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isDiguise)
+        {
+            Diguise.SetActive(false);
+        }
+        if (isDiguise)
+        {
+            Diguise.SetActive(true);
+        }
         if (!inDialogue)
         {
            /* if (weapon == WeaponType.Unarmed)
@@ -230,6 +239,12 @@ public class Player_Control : MonoBehaviour
                 other.gameObject.SetActive(false);
                 pickUpScript = null;
             }
+            if (pickUpScript.type == PickUp.pickUpType.disguise)
+            {
+                DisguiseOn();
+                other.gameObject.SetActive(false);
+                pickUpScript = null;
+            }
         }
     }
     public void UnArm()
@@ -243,5 +258,32 @@ public class Player_Control : MonoBehaviour
     public void DialoguEnter()
     {
         inDialogue = true;
+    }
+    public void addJelly()
+    {
+        explosiveJelly++;
+
+            if (explosiveJelly>1)
+        { explosiveJelly = 1;
+
+        }
+    }
+    public void removeJelly()
+    {
+        if (explosiveJelly > 0)
+        {
+            explosiveJelly--;
+        }
+       
+    }
+    public void DisguiseOn()
+    {
+        isDiguise = true;
+        Fungus.Flowchart.BroadcastFungusMessage("DisguiseOn");
+    }
+    public void DisguiseOff()
+    {
+        isDiguise = false;
+        Fungus.Flowchart.BroadcastFungusMessage("DisguiseOff");
     }
 }

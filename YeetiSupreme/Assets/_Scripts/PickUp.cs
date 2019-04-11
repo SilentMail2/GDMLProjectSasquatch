@@ -12,7 +12,7 @@ public class PickUp : MonoBehaviour
     
     public enum pickUpType
     {
-        weapon, health, throwable
+        weapon, health, throwable, disguise
     }
     public pickUpType type;
     public enum weaponType
