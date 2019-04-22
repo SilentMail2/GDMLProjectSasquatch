@@ -5,6 +5,8 @@ using UnityEngine;
 public class CursorScriptPC : MonoBehaviour
 {
     GameObject Player;
+    public float adjustmentX;
+    public float adjustmentZ;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class CursorScriptPC : MonoBehaviour
         {
             Vector3 pointToLook = cameraRay.GetPoint(rayLength);
 
-            this.transform.position = (new Vector3(pointToLook.x, Player.transform.position.y+0.5f, pointToLook.z));
+            this.transform.position = (new Vector3(pointToLook.x+adjustmentX, Player.transform.position.y+0.5f, pointToLook.z + adjustmentZ));
         }
     }
 }

@@ -264,7 +264,8 @@ public class Player_Control : MonoBehaviour
         explosiveJelly++;
 
             if (explosiveJelly>1)
-        { explosiveJelly = 1;
+        {
+            explosiveJelly = 1;
 
         }
     }

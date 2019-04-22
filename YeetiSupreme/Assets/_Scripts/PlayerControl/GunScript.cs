@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GunScript : MonoBehaviour
 {
-    enum weaponType { Shotgun, Handgun, autoMat}
+    enum weaponType { Shotgun, Handgun, autoMat, unarmed}
     [SerializeField] weaponType Weapon;
     [SerializeField] GameObject[] bullet;
     [SerializeField] GameObject barrelEnd;
@@ -15,7 +15,7 @@ public class GunScript : MonoBehaviour
     [SerializeField] GameObject ammoAmmountUI;
     [SerializeField] int ammoAmount;
     [SerializeField] GameObject player;
-    
+    [SerializeField] float punchDist;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,10 +45,9 @@ public class GunScript : MonoBehaviour
                 {
                     if (shotgunAnim.GetBool("ShotReady"))
                     {
-                        Smoke.SetActive(true);
-                        Instantiate(bullet[0], barrelEnd.transform.position, barrelEnd.transform.rotation);
+ 
                         shotgunAnim.SetBool("ShotReady", false);
-                        ammoAmount--;
+
                     }
                 }
                 if (Weapon == weaponType.Handgun)
@@ -56,10 +55,13 @@ public class GunScript : MonoBehaviour
                     if (shotgunAnim.GetBool("ShotReady"))
                     {
                         Smoke.SetActive(true);
-                        Instantiate(bullet[0], barrelEnd.transform.position, barrelEnd.transform.rotation);
                         shotgunAnim.SetBool("ShotReady", false);
-                        ammoAmount--;
+
                     }
+                }
+                if (Weapon == weaponType.unarmed)
+                {
+                    
                 }
             }
             if (Input.GetButton("Fire1"))
@@ -69,13 +71,12 @@ public class GunScript : MonoBehaviour
                     if (shotgunAnim.GetBool("ShotReady"))
                     {
                         Smoke.SetActive(true);
-                        Instantiate(bullet[0], barrelEnd.transform.position, barrelEnd.transform.rotation);
                         shotgunAnim.SetBool("ShotReady", false);
-                        ammoAmount--;
 
                     }
                 }
             }
+
         }
     }
 
@@ -85,4 +86,41 @@ public class GunScript : MonoBehaviour
         shotgunAnim.SetBool("ShotReady", true);
         this.transform.eulerAngles = new Vector3(0, 90, 0);
     }
+    public void Punch()
+    {
+        int layermask = 11;
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, punchDist, layermask))
+        {
+            HealthScript enemy = hit.transform.gameObject.GetComponent<HealthScript>();
+            enemy.TakeHealth(5);
+        }
+    }
+    public void Swing()
+    { }
+    public void FireShot()
+    {
+        if (Weapon != weaponType.autoMat)
+        {
+            Smoke.SetActive(true);
+            Instantiate(bullet[0], barrelEnd.transform.position, barrelEnd.transform.rotation);
+            ammoAmount--;
+            Smoke.SetActive(false);
+            shotgunAnim.SetBool("ShotReady", true);
+            this.transform.eulerAngles = new Vector3(0, 90, 0);
+        }
+        if (Weapon == weaponType.autoMat)
+        {
+            if (!shotgunAnim.GetBool("ShotReady"))
+            {
+                Smoke.SetActive(true);
+                Instantiate(bullet[0], barrelEnd.transform.position, barrelEnd.transform.rotation);
+                ammoAmount--;
+                Smoke.SetActive(false);
+                shotgunAnim.SetBool("ShotReady", true);
+                this.transform.eulerAngles = new Vector3(0, 90, 0);
+            }
+        }
+    }
+    // press/hold trigger, play animation, at animation point fireshot
 }

@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507628155799275153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.66}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3855231596834488051}
@@ -159,14 +159,14 @@ MonoBehaviour:
   dashSpeed: 100
   inDialogue: 0
   playerCamera: {fileID: 0}
-  camPos: {x: 0, y: 60, z: 33}
+  camPos: {x: 0, y: 44, z: -37}
   cc: {fileID: 3855231596834487822}
   isDiguise: 0
   Diguise: {fileID: 1928151406848380839}
   ObjectPool: {fileID: 0}
   weaponSpawn: {fileID: 507628155799275153}
   weaponList:
-  - {fileID: 3393220740874568673, guid: 3d30cc2201f4c5042b95f2ebd42ebeda, type: 3}
+  - {fileID: 8488884850620514650, guid: d933a4538509d5542a71eca330e7c7a1, type: 3}
   - {fileID: 7616371068747924133, guid: 565ed7ff1a9122443a1fdbad4d94f03c, type: 3}
   - {fileID: 5915474620423563128, guid: 85b37de523869ca46af8d4ff2bc73939, type: 3}
   rotSp: 10
@@ -181,7 +181,7 @@ MonoBehaviour:
   unarmedReady: 1
   targetCursor: {fileID: 0}
   explosiveJelly: 0
-  weapon: 3
+  weapon: 1
   hp: 60
 --- !u!143 &3855231596834487822
 CharacterController:
