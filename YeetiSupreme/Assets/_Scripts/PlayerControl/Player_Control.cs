@@ -233,13 +233,13 @@ public class Player_Control : MonoBehaviour
 
 
             }
-            if (pickUpScript.type == PickUp.pickUpType.health)
+            else if (pickUpScript.type == PickUp.pickUpType.health)
             {
                 this.GetComponent<HealthScript>().TakeHealth(pickUpScript.health);
                 other.gameObject.SetActive(false);
                 pickUpScript = null;
             }
-            if (pickUpScript.type == PickUp.pickUpType.disguise)
+            else if (pickUpScript.type == PickUp.pickUpType.disguise)
             {
                 DisguiseOn();
                 other.gameObject.SetActive(false);

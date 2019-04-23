@@ -120,7 +120,7 @@ MonoBehaviour:
   isPrime: 0
   barrelAngle: 0
   damageStuff: {fileID: 0}
-  dam: 50
+  dam: 25
 --- !u!54 &3055793228391059862
 Rigidbody:
   m_ObjectHideFlags: 0

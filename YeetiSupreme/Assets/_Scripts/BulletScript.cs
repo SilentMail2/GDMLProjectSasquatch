@@ -53,28 +53,32 @@ public class BulletScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (type == faction.Player)
+        if (other.gameObject.layer == 11)
         {
+
+            if (type == faction.Player)
+            {
 
                 damageStuff = other.GetComponent<HealthScript>();
                 if (!damageStuff.isPlayer)
                 {
                     damageStuff.TakeHealth(dam);
-                Destroy(this.gameObject);
-            }
-            
+                    Destroy(this.gameObject);
+                }
 
-        }
-        if (type == faction.enemy)
-        {
+
+            }
+            if (type == faction.enemy)
+            {
 
                 damageStuff = other.GetComponent<HealthScript>();
                 if (damageStuff.isPlayer)
                 {
                     damageStuff.TakeHealth(dam);
-                Destroy(this.gameObject);
-            }
+                    Destroy(this.gameObject);
+                }
 
+            }
         }
         if (other.gameObject.layer == 15)
         {

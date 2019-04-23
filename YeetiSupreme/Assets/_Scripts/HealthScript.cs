@@ -23,6 +23,8 @@ public class HealthScript : MonoBehaviour
     private void FixedUpdate()
     {
         CheckDeath();
+        if (health>maxHealth)
+        { health = maxHealth; }
     }
     public void TakeHealth(float dam)
     {
