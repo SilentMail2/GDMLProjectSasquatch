@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 1291255230}
   - component: {fileID: 971400526}
   - component: {fileID: 971400525}
+  - component: {fileID: 1181798728}
+  - component: {fileID: 1181798727}
   m_Layer: 11
   m_Name: CentuarianBandit
   m_TagString: Untagged
@@ -131,10 +133,10 @@ MonoBehaviour:
   navPoints: []
   agent: {fileID: 7069545230235608272}
   healthPoints: 0
-  lookRadius: 39.14
+  lookRadius: 35
   target: {fileID: 0}
   seesPlayer: 0
-  bullet: {fileID: 5126255105988041018, guid: d34f73e3168af9444b805932e7be0f7a, type: 3}
+  bullet: {fileID: 828753613491779356, guid: 0283b608e1cf7bc499034c69dc464bc9, type: 3}
   barrelPoint: {fileID: 8103882906646535086}
   bulletTime: 1
   timeBullet: 1
@@ -179,7 +181,7 @@ MonoBehaviour:
   health: 20
   isPlayer: 0
   maxHealth: 20
-  questable: 0
+  questable: 1
   quest: {fileID: 0}
   healthBar: {fileID: 0}
   drop:
@@ -214,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Centaurian Bandit
+  nameText: Des Ironhoof
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
@@ -235,6 +237,38 @@ BoxCollider:
   m_Size: {x: 2.7327728, y: 6.333229, z: 6.412628}
   m_Center: {x: 0.12375641, y: 0.044446945, z: -0.16905212}
 --- !u!114 &971400525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538496990403022302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Centaurian Bandit
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits: []
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+--- !u!65 &1181798728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538496990403022302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7327728, y: 6.333229, z: 6.412628}
+  m_Center: {x: 0.12375641, y: 0.044446945, z: -0.16905212}
+--- !u!114 &1181798727
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -39,7 +39,7 @@ public class Player_Control : MonoBehaviour
    
     private enum WeaponType
     {
-        Unarmed, Shotgun, Handgun, autoMat
+        Unarmed, Shotgun, Handgun, autoMat, Spear
     }
     [SerializeField] private WeaponType weapon;
 
@@ -150,6 +150,14 @@ public class Player_Control : MonoBehaviour
         if (weapon == WeaponType.Shotgun)
         {
             Instantiate(weaponList[0], weaponSpawn.transform.position, Quaternion.identity, weaponSpawn.transform);
+            equppedWeapon = GameObject.FindGameObjectWithTag("PlayersGun");
+            equppedWeapon.transform.localEulerAngles = weaponSpawn.transform.localEulerAngles;
+            hasGun = true;
+            unarmedObject.SetActive(false);
+        }
+        if (weapon == WeaponType.Spear)
+        {
+            Instantiate(weaponList[3], weaponSpawn.transform.position, Quaternion.identity, weaponSpawn.transform);
             equppedWeapon = GameObject.FindGameObjectWithTag("PlayersGun");
             equppedWeapon.transform.localEulerAngles = weaponSpawn.transform.localEulerAngles;
             hasGun = true;

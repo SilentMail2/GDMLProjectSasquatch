@@ -16,8 +16,10 @@ public class BulletScript : MonoBehaviour
     [SerializeField] private GameObject barrelEnd;
     [SerializeField] private string barrelName;
     [SerializeField] private bool isPrime;
+    [SerializeField] private bool isSpear;
     [SerializeField] private float barrelAngle;
     [SerializeField] HealthScript damageStuff;
+    [SerializeField] Rigidbody rb;
     [SerializeField] float dam;
     private void Start()
     {
@@ -80,9 +82,16 @@ public class BulletScript : MonoBehaviour
 
             }
         }
-        if (other.gameObject.layer == 15)
+        else if (other.gameObject.layer == 15)
         {
-            Destroy(this.gameObject);
+            if (!isSpear)
+            {
+                Destroy(this.gameObject);
+            }
+            else if (isSpear)
+            {
+                rb.useGravity = false;
+            }
         }
 
     }

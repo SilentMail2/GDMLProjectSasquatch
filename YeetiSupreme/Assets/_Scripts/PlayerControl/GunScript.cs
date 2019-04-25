@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GunScript : MonoBehaviour
 {
-    enum weaponType { Shotgun, Handgun, autoMat, unarmed}
+    enum weaponType { Shotgun, Handgun, autoMat, unarmed, spear}
     [SerializeField] weaponType Weapon;
     [SerializeField] GameObject[] bullet;
     [SerializeField] GameObject barrelEnd;
@@ -41,6 +41,10 @@ public class GunScript : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
+                if (Weapon == weaponType.spear)
+                {
+                    FireShot();
+                }
                 if (Weapon == weaponType.Shotgun)
                 {
                     if (shotgunAnim.GetBool("ShotReady"))
