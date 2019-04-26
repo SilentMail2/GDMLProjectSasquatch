@@ -11,25 +11,28 @@ public class DialogeTrigger : MonoBehaviour
     public Dialogue[] dialogue;
     public string message;
     public bool dialogueGiven;
-    
+    public bool canTalk = true;
     public void TriggerDialogue()
     { FindObjectOfType<DialogeManager>().StartDialogue(dialogue[0]); }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            if (!dialogueGiven)
+            if (canTalk)
             {
-                if (!automaticTrigger)
+                if (!dialogueGiven)
                 {
-                    EtoTalk.SetActive(true);
+                    if (!automaticTrigger)
+                    {
+                        EtoTalk.SetActive(true);
 
-                }
-                if (automaticTrigger)
-                {
-                    Fungus.Flowchart.BroadcastFungusMessage(message);
-                    other.GetComponent<Player_Control>().inDialogue = true;
-                    Debug.Log("Lets Talk");//TriggerDialogue();
+                    }
+                    if (automaticTrigger)
+                    {
+                        Fungus.Flowchart.BroadcastFungusMessage(message);
+                        other.GetComponent<Player_Control>().inDialogue = true;
+                        Debug.Log("Lets Talk");//TriggerDialogue();
+                    }
                 }
             }
         }
@@ -38,21 +41,24 @@ public class DialogeTrigger : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (!dialogueGiven)
+        if (canTalk)
         {
-            if (other.tag == "Player")
+            if (!dialogueGiven)
             {
-                if (!automaticTrigger)
+                if (other.tag == "Player")
                 {
-                    if (Input.GetKeyDown(KeyCode.E))
+                    if (!automaticTrigger)
                     {
-                        EtoTalk.SetActive(false);
-                        Fungus.Flowchart.BroadcastFungusMessage(message);
-                        other.GetComponent<Player_Control>().inDialogue = true;
-                        Debug.Log("Lets Talk");//TriggerDialogue();
+                        if (Input.GetKeyDown(KeyCode.E))
+                        {
+                            EtoTalk.SetActive(false);
+                            Fungus.Flowchart.BroadcastFungusMessage(message);
+                            other.GetComponent<Player_Control>().inDialogue = true;
+                            Debug.Log("Lets Talk");//TriggerDialogue();
+                        }
                     }
-                }
 
+                }
             }
         }
     }
@@ -72,5 +78,13 @@ public class DialogeTrigger : MonoBehaviour
     public void DisableBlock()
     {
         this.gameObject.SetActive(false);
+    }
+    public void CanTalk()
+    {
+        canTalk = true;
+    }
+    public void CantTalk()
+    {
+        canTalk = false;
     }
 }
