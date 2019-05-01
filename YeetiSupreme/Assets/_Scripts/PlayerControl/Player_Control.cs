@@ -31,7 +31,12 @@ public class Player_Control : MonoBehaviour
     [SerializeField] GameObject unarmedObject;
     
     public bool unarmedReady;
-
+    [Header("throwing")]
+    [SerializeField] int throwableCount;
+    public enum throwableType
+    {
+        none, explosive, knife
+    }
 
     [SerializeField] GameObject targetCursor;
 

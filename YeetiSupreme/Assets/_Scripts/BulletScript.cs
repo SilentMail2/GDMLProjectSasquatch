@@ -23,14 +23,13 @@ public class BulletScript : MonoBehaviour
     [SerializeField] float dam;
     private void Start()
     {
-        if (isPrime)
-        {
+      
             barrelEnd = GameObject.Find(barrelName);
-      }
+      
         if (!isPrime)
         {
-            barrelEnd = this.transform.parent.gameObject;
-            barrelAngle = barrelEnd.transform.localEulerAngles.y;
+          //  barrelEnd = this.transform.parent.gameObject;
+            barrelAngle = barrelEnd.transform.localEulerAngles.y+this.transform.localEulerAngles.y;
         }
 
         
@@ -48,7 +47,7 @@ public class BulletScript : MonoBehaviour
         if (!isPrime)
         {
             
-            transform.Translate(new Vector3(speed*Time.deltaTime, 0, 0));
+            transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
             transform.eulerAngles = new Vector3(0, spread + barrelAngle, 0);
         }
     }
