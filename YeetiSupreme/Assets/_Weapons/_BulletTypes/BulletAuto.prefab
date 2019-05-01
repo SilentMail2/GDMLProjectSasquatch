@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 296955105761636564}
   - component: {fileID: 296955105761636563}
   - component: {fileID: 296955105761636562}
+  - component: {fileID: 3398478710149961293}
   m_Layer: 13
   m_Name: BulletAuto
   m_TagString: Bullet
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296955105761636561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 538.3615, y: 6.245517, z: 498.48083}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,11 +107,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   time: 10
-  timeTaken: 0
+  timeTaken: 0.5
   minSpread: 0
   maxSpread: 0
   spread: 0
-  speed: 10
+  speed: 100
   barrelEnd: {fileID: 0}
   barrelName: BarrelEnd
   isPrime: 0
@@ -118,4 +119,20 @@ MonoBehaviour:
   barrelAngle: 0
   damageStuff: {fileID: 0}
   rb: {fileID: 0}
-  dam: 0
+  dam: 10
+--- !u!54 &3398478710149961293
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296955105761636561}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
