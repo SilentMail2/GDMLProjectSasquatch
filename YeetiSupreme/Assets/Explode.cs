@@ -8,7 +8,8 @@ public class Explode : MonoBehaviour
     [SerializeField] bool story;
     public string message;
     public GameObject Explosive;
-    void ExplodeThisObject()
+
+    public void ExplodeThisObject()
     {
         if (story)
         {

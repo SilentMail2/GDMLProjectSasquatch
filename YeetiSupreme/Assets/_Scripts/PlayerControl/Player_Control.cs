@@ -16,6 +16,9 @@ public class Player_Control : MonoBehaviour
     [SerializeField] private CharacterController cc;
     public bool isDiguise = false;
     [SerializeField] GameObject Diguise;
+    public PlayerInventory playerInventory;
+    [SerializeField] GameObject inventoryUI;
+    ChestOpen chestOpen;
     [Space(10)]
     [Header("Weapon")]
     [SerializeField] private GameObject ObjectPool;
@@ -29,7 +32,6 @@ public class Player_Control : MonoBehaviour
     [SerializeField] private PickUp pickUpScript;
     [SerializeField] private GameObject equppedWeapon;
     [SerializeField] GameObject unarmedObject;
-    
     public bool unarmedReady;
     [Header("throwing")]
     [SerializeField] int throwableCount;
@@ -38,6 +40,8 @@ public class Player_Control : MonoBehaviour
         none, explosive, knife
     }
 
+    [SerializeField] GameObject EtoInteract;
+    [SerializeField] GameObject QtoExplode;
     [SerializeField] GameObject targetCursor;
 
     public int explosiveJelly;
@@ -93,6 +97,15 @@ public class Player_Control : MonoBehaviour
             Rotation();
             Cursor.visible = false;
             targetCursor.SetActive(true);
+            if (Input.GetKeyDown("i"))
+            {
+                inventoryUI.SetActive(true);
+
+            }
+            if (Input.GetKeyUp("i"))
+            {
+                inventoryUI.SetActive(false);
+            }
         }
         if (inDialogue)
         {
@@ -100,6 +113,7 @@ public class Player_Control : MonoBehaviour
             Cursor.visible = true;
             targetCursor.SetActive(false);
         }
+
     }
 
     private void Moving()
@@ -202,64 +216,106 @@ public class Player_Control : MonoBehaviour
             Debug.Log("I diagnose you as dead");
         }
     }*/
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-       /* if (other.tag == "Bullet")
+        if (other.tag == "Explodable")
         {
-            TakeDamage(5);
-        }*/
-        if (other.tag == "pickup")
+            if (Input.GetKeyDown("q"))
+            {
+                other.GetComponent<Explode>().ExplodeThisObject();
+            }
+        }
+        if (other.tag == "Chest")
         {
-            pickUpScript = other.gameObject.GetComponent<PickUp>();
-            if (pickUpScript.type == PickUp.pickUpType.weapon)
+            
+            if (Input.GetKeyDown("e"))
             {
-                if (pickUpScript.Weapon == PickUp.weaponType.handgun)
+                if (!chestOpen.locked)
                 {
-                    if (!hasGun)
-                    {
-                        EquipGun(WeaponType.Handgun);
-                        other.gameObject.SetActive(false);
-                        pickUpScript = null;
-                    }
-                    if (hasGun) { return; }
+                    chestOpen.OpenChest();
+                    inDialogue = true;
                 }
-                if (pickUpScript.Weapon == PickUp.weaponType.shotgun)
+                else if (chestOpen.locked && playerInventory.hasKey)
                 {
-                    if (!hasGun)
-                    {
-                        EquipGun(WeaponType.Shotgun);
-                        other.gameObject.SetActive(false);
-                        pickUpScript = null;
-                    }
-                    if (hasGun) { return; }
+                    chestOpen.OpenChest();
+                    inDialogue = true;
                 }
-                if (pickUpScript.Weapon == PickUp.weaponType.autoMat)
+                else if (chestOpen.locked && !playerInventory.hasKey)
                 {
-                    if (!hasGun)
-                    {
-                        EquipGun(WeaponType.autoMat);
-                        other.gameObject.SetActive(false);
-                        pickUpScript = null;
-                    }
-                    if (hasGun) { return; }
+                    Fungus.Flowchart.BroadcastFungusMessage("LockedChest");
                 }
-
-
-            }
-            else if (pickUpScript.type == PickUp.pickUpType.health)
-            {
-                this.GetComponent<HealthScript>().TakeHealth(pickUpScript.health);
-                other.gameObject.SetActive(false);
-                pickUpScript = null;
-            }
-            else if (pickUpScript.type == PickUp.pickUpType.disguise)
-            {
-                DisguiseOn();
-                other.gameObject.SetActive(false);
-                pickUpScript = null;
             }
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        /* if (other.tag == "Bullet")
+         {
+             TakeDamage(5);
+         }*/
+        if (other.tag == "Chest")
+        {
+            chestOpen = other.gameObject.GetComponent<ChestOpen>();
+        }
+
+        if (other.tag == "pickup")
+            {
+                pickUpScript = other.gameObject.GetComponent<PickUp>();
+                if (pickUpScript.type == PickUp.pickUpType.weapon)
+                {
+                    if (pickUpScript.Weapon == PickUp.weaponType.handgun)
+                    {
+                        if (!hasGun)
+                        {
+                            EquipGun(WeaponType.Handgun);
+                            other.gameObject.SetActive(false);
+                            pickUpScript = null;
+                        }
+                        if (hasGun) { return; }
+                    }
+                    if (pickUpScript.Weapon == PickUp.weaponType.shotgun)
+                    {
+                        if (!hasGun)
+                        {
+                            EquipGun(WeaponType.Shotgun);
+                            other.gameObject.SetActive(false);
+                            pickUpScript = null;
+                        }
+                        if (hasGun) { return; }
+                    }
+                    if (pickUpScript.Weapon == PickUp.weaponType.autoMat)
+                    {
+                        if (!hasGun)
+                        {
+                            EquipGun(WeaponType.autoMat);
+                            other.gameObject.SetActive(false);
+                            pickUpScript = null;
+                        }
+                        if (hasGun) { return; }
+                    }
+
+
+                }
+                else if (pickUpScript.type == PickUp.pickUpType.health)
+                {
+                    this.GetComponent<HealthScript>().TakeHealth(pickUpScript.health);
+                    other.gameObject.SetActive(false);
+                    pickUpScript = null;
+                }
+                else if (pickUpScript.type == PickUp.pickUpType.disguise)
+                {
+                    DisguiseOn();
+                    other.gameObject.SetActive(false);
+                    pickUpScript = null;
+                }
+
+            }
+        }
+    
     public void UnArm()
     {
         weapon = WeaponType.Unarmed;
@@ -301,3 +357,4 @@ public class Player_Control : MonoBehaviour
         Fungus.Flowchart.BroadcastFungusMessage("DisguiseOff");
     }
 }
+

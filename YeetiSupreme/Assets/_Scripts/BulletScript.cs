@@ -26,11 +26,11 @@ public class BulletScript : MonoBehaviour
       
             barrelEnd = GameObject.Find(barrelName);
       
-        if (!isPrime)
-        {
+        
+        
           //  barrelEnd = this.transform.parent.gameObject;
             barrelAngle = barrelEnd.transform.localEulerAngles.y+this.transform.localEulerAngles.y;
-        }
+        
 
         
 

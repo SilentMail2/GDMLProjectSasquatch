@@ -10,6 +10,8 @@ TagManager:
   - PlayersGun
   - ammoUI
   - NPC
+  - Chest
+  - Explodable
   layers:
   - Default
   - TransparentFX

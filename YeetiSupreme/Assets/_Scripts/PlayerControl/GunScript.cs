@@ -88,7 +88,7 @@ public class GunScript : MonoBehaviour
     {
         Smoke.SetActive(false);
         shotgunAnim.SetBool("ShotReady", true);
-        this.transform.eulerAngles = new Vector3(0, 90, 0);
+        //this.transform.eulerAngles = new Vector3(0, 90, 0);
     }
     public void Punch()
     {
@@ -111,7 +111,7 @@ public class GunScript : MonoBehaviour
             ammoAmount--;
             Smoke.SetActive(false);
             shotgunAnim.SetBool("ShotReady", true);
-            this.transform.eulerAngles = new Vector3(0, 90, 0);
+           // this.transform.eulerAngles = new Vector3(0, 90, 0);
         }
         if (Weapon == weaponType.autoMat)
         {
@@ -122,7 +122,7 @@ public class GunScript : MonoBehaviour
                 ammoAmount--;
                 Smoke.SetActive(false);
                 shotgunAnim.SetBool("ShotReady", true);
-                this.transform.eulerAngles = new Vector3(0, 90, 0);
+            //    this.transform.eulerAngles = new Vector3(0, 90, 0);
             }
         }
     }
