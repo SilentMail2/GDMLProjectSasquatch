@@ -124,7 +124,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3855231596834487821}
-  m_Mesh: {fileID: 4300000, guid: 15a857ac5e8c3784698dd0c9f7f7a1b7, type: 3}
+  m_Mesh: {fileID: 4300000, guid: b4d2792bd449a08459fb5fc9de3e1e23, type: 3}
 --- !u!23 &3855231596834488049
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b5e80ff15f3a30f44842a16dea3dca1e, type: 2}
+  - {fileID: 2100000, guid: 832e063c2a039614fbee5bc79cfd6f83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -197,6 +197,7 @@ MonoBehaviour:
   isDiguise: 0
   Diguise: {fileID: 1928151406848380839}
   playerInventory: {fileID: 1234435495}
+  inventoryUI: {fileID: 0}
   ObjectPool: {fileID: 0}
   weaponSpawn: {fileID: 507628155799275153}
   weaponList:
@@ -215,9 +216,11 @@ MonoBehaviour:
     type: 3}
   unarmedReady: 1
   throwableCount: 0
+  EtoInteract: {fileID: 0}
+  QtoExplode: {fileID: 0}
   targetCursor: {fileID: 0}
   explosiveJelly: 0
-  weapon: 3
+  weapon: 0
   hp: 60
 --- !u!143 &3855231596834487822
 CharacterController:
@@ -324,9 +327,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasKey: 0
+  key: {fileID: 0}
   exploGel: 0
+  gel: {fileID: 0}
   disguise: 0
-  coin: 0
+  coin: 10
+  coins: {fileID: 0}
+  expl: 0
+  explosives: {fileID: 0}
 --- !u!1 &4501355490591209527
 GameObject:
   m_ObjectHideFlags: 0
