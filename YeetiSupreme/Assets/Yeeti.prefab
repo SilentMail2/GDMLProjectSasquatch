@@ -192,7 +192,7 @@ MonoBehaviour:
   dashSpeed: 100
   inDialogue: 1
   playerCamera: {fileID: 0}
-  camPos: {x: 0, y: 45, z: 30}
+  camPos: {x: -10, y: 45, z: 25}
   cc: {fileID: 3855231596834487822}
   isDiguise: 0
   Diguise: {fileID: 1928151406848380839}

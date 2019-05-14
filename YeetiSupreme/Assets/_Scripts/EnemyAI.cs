@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] Transform[] navPoints;
-    [SerializeField] NavMeshAgent agent;
+    [SerializeField] NavMeshAgent agent;1
+
     [SerializeField] float healthPoints;
     [SerializeField] float lookRadius = 10f;
     [SerializeField] Transform target;
