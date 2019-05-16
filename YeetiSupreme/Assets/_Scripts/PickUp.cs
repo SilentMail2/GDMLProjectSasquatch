@@ -9,10 +9,10 @@ public class PickUp : MonoBehaviour
     [SerializeField] private float originalY;
     [SerializeField] private float floatStrength;
     [SerializeField] private float Rotate;
-    
+    [SerializeField] public int coinWorth;
     public enum pickUpType
     {
-        weapon, health, throwable, disguise
+        weapon, health, throwable, disguise, coin, MonsterGoo
     }
     public pickUpType type;
     public enum weaponType

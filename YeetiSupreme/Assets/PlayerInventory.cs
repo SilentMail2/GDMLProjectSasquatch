@@ -12,6 +12,7 @@ public class PlayerInventory : MonoBehaviour
    // [SerializeField] Text disguised;
     public int coin;
     [SerializeField] Text coins;
+    [SerializeField] Text coinsMain;
     public int expl;
     [SerializeField] Text explosives;
 
@@ -27,6 +28,7 @@ public class PlayerInventory : MonoBehaviour
         }
         gel.text = exploGel.ToString();
         coins.text = coin.ToString();
+        coinsMain.text = coin.ToString();
         explosives.text = expl.ToString();
     }
     private void Update()
@@ -41,6 +43,7 @@ public class PlayerInventory : MonoBehaviour
         }
         gel.text = exploGel.ToString();
         coins.text = coin.ToString();
+        coinsMain.text = coin.ToString();
         explosives.text = expl.ToString();
         if (expl<0)
         { expl = 0; }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Player_Control : MonoBehaviour
 {
+    [SerializeField] Animator anim;
     [Header("Movement")]
     [SerializeField] private float speed;
     [SerializeField] private float dashSpeed;
@@ -59,7 +60,7 @@ public class Player_Control : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Confined;
+       // Cursor.lockState = CursorLockMode.Confined;
         ObjectPool = GameObject.Find("ObjectPool");
         playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         EquipGun(weapon);
@@ -70,6 +71,14 @@ public class Player_Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        {
+            anim.SetBool("Walking", true);
+        }
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            anim.SetBool("Walking", false);
+        }
         if (!isDiguise)
         {
             Diguise.SetActive(false);
@@ -90,12 +99,12 @@ public class Player_Control : MonoBehaviour
                 }
             }*/
 
-            Cursor.lockState = CursorLockMode.Confined;
+        //    Cursor.lockState = CursorLockMode.Confined;
             Moving();
             Dash();
             cameraMovement();
             Rotation();
-            Cursor.visible = false;
+       //     Cursor.visible = false;
             targetCursor.SetActive(true);
             if (Input.GetKeyDown("i"))
             {
@@ -119,6 +128,7 @@ public class Player_Control : MonoBehaviour
     private void Moving()
     {
         cc.transform.Translate(new Vector3((Input.GetAxis("Horizontal") * speed * Time.deltaTime), 0, (Input.GetAxis("Vertical") * speed * Time.deltaTime)));
+
     }
     private void Dash()
     {
@@ -144,7 +154,7 @@ public class Player_Control : MonoBehaviour
 
     private void Rotation()
     {
-        /* Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+         Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
          Plane ground = new Plane(Vector3.up, new Vector3(0,this.transform.position.y,0));
          float rayLength;
@@ -154,12 +164,21 @@ public class Player_Control : MonoBehaviour
 
              transform.LookAt(new Vector3(pointToLook.x,pointToLook.y,pointToLook.z));
          }
-         */
-        Vector3 pointLook = targetCursor.transform.position;
+         
+       /* Vector3 pointLook = targetCursor.transform.position;
         transform.LookAt(new Vector3(pointLook.x, this.transform.position.y, pointLook.z));
+        */
+     /*   Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+        Plane ground = new Plane(Vector3.up, Vector3.zero);
+        float rayLength;
+        if (ground.Raycast(cameraRay, out rayLength))
+        {
+            Vector3 pointToLook = cameraRay.GetPoint(rayLength);
 
-      //  yRot += (Input.GetAxis("Rotate") * rotSp * Time.deltaTime);
+            transform.LookAt (new Vector3(pointToLook.x , transform.position.y, pointToLook.z));
+        }*/
+        //  yRot += (Input.GetAxis("Rotate") * rotSp * Time.deltaTime);
         //transform.eulerAngles = new Vector3(0, yRot, 0);
     }
     private void EquipGun(WeaponType weaponSelected)
@@ -312,6 +331,12 @@ public class Player_Control : MonoBehaviour
                     other.gameObject.SetActive(false);
                     pickUpScript = null;
                 }
+                else if (pickUpScript.type == PickUp.pickUpType.coin)
+            {
+                this.GetComponent<PlayerInventory>().coin += other.GetComponent<PickUp>().coinWorth;
+                other.gameObject.SetActive(false);
+                pickUpScript = null;
+            }
 
             }
         }
