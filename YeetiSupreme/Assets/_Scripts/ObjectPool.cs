@@ -15,7 +15,7 @@ public class ObjectPool : MonoBehaviour
     #endregion
 
     public GameObject Player;
-
+    public bool enemyHostile;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +26,9 @@ public class ObjectPool : MonoBehaviour
     void Update()
     {
         
+    }
+    public void EnemyTurnHostile()
+    {
+        enemyHostile = true;
     }
 }

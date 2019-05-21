@@ -452,7 +452,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2850486237039875425}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 2575820829142018834}
   variables:
   - {fileID: 2575820829142018615}
   - {fileID: 2575820829142018610}
@@ -5870,7 +5871,7 @@ MonoBehaviour:
   indentLevel: 0
   text: How do you think I should deal with these raiders?
   description: 
-  targetBlock: {fileID: 2575820829142018845}
+  targetBlock: {fileID: 0}
   hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}

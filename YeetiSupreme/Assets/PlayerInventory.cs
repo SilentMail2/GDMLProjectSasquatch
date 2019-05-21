@@ -57,5 +57,8 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
-
+    public void GiveKey()
+    {
+        hasKey = true;
+    }
 }

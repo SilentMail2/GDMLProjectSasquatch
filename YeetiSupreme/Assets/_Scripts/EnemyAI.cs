@@ -20,10 +20,12 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] int navLength;
     [SerializeField] Transform[] moveToStory;
     [SerializeField] bool movingToPosition;
+    public ObjectPool pool;
     // Start is called before the first frame update
     void Start()
     {
         target = ObjectPool.instance.Player.transform;
+        pool = GameObject.Find("ObjectPool").GetComponent<ObjectPool>();
     }
 
     // Update is called once per frame
@@ -31,7 +33,8 @@ public class EnemyAI : MonoBehaviour
     {
         MoveToPosition();
         float distance = Vector3.Distance(target.position, transform.position);
-        if (!target.GetComponent<Player_Control>().inDialogue && !target.GetComponent<Player_Control>().isDiguise)
+        if (!target.GetComponent<Player_Control>().inDialogue && !target.GetComponent<Player_Control>().isDiguise || pool.GetComponent<ObjectPool>().enemyHostile)
+
         {
             if (distance <= lookRadius)
             {

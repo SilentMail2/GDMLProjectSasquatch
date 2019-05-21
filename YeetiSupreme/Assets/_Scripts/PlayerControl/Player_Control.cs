@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Player_Control : MonoBehaviour
 {
     [SerializeField] Animator anim;
+
     [Header("Movement")]
     [SerializeField] private float speed;
     [SerializeField] private float dashSpeed;
@@ -86,7 +87,8 @@ public class Player_Control : MonoBehaviour
         if (isDiguise)
         {
             Diguise.SetActive(true);
-        }
+            
+                }
         if (!inDialogue)
         {
            /* if (weapon == WeaponType.Unarmed)
@@ -105,7 +107,7 @@ public class Player_Control : MonoBehaviour
             cameraMovement();
             Rotation();
        //     Cursor.visible = false;
-            targetCursor.SetActive(true);
+          //  targetCursor.SetActive(true);
             if (Input.GetKeyDown("i"))
             {
                 inventoryUI.SetActive(true);
@@ -120,7 +122,7 @@ public class Player_Control : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            targetCursor.SetActive(false);
+           // targetCursor.SetActive(false);
         }
 
     }
@@ -268,7 +270,10 @@ public class Player_Control : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        
+        if (other.tag == "Chest")
+        {
+            EtoInteract.SetActive(false);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -278,6 +283,7 @@ public class Player_Control : MonoBehaviour
          }*/
         if (other.tag == "Chest")
         {
+            EtoInteract.SetActive(true);
             chestOpen = other.gameObject.GetComponent<ChestOpen>();
         }
 
