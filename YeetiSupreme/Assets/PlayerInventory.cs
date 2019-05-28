@@ -18,7 +18,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void Start()
     {
-        if (hasKey)
+       /* if (hasKey)
         {
             key.text = "1";
         }
@@ -29,11 +29,11 @@ public class PlayerInventory : MonoBehaviour
         gel.text = exploGel.ToString();
         coins.text = coin.ToString();
         coinsMain.text = coin.ToString();
-        explosives.text = expl.ToString();
+        explosives.text = expl.ToString();*/
     }
     private void Update()
     {
-        if (hasKey)
+       /* if (hasKey)
         {
             key.text = "1";
         }
@@ -54,10 +54,10 @@ public class PlayerInventory : MonoBehaviour
         if (exploGel < 0)
         {
             exploGel = 0;
-        }
+        }*/
     }
 
-    public void GiveKey()
+    public void GiveKey ()
     {
         hasKey = true;
     }

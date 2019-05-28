@@ -13266,7 +13266,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -3343.662
     y: 842.2119
-    width: 120
+    width: 130.68182
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13907,7 +13907,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 623.7939
     y: 483.89038
-    width: 120
+    width: 120.45455
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14020,7 +14020,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &623689433
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14101,7 +14101,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 663.59204
     y: 418.87985
-    width: 120
+    width: 120.45455
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14179,7 +14179,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 469.10046
     y: 481.8495
-    width: 120
+    width: 120.45455
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14470,7 +14470,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 415.0209
     y: 420.9202
-    width: 120
+    width: 120.45455
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14640,7 +14640,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 584.8759
     y: 913.1974
-    width: 120
+    width: 130.68182
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15250,7 +15250,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -746.431
     y: 113.77806
-    width: 120
+    width: 125.00001
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -47129,11 +47129,102 @@ PrefabInstance:
       propertyPath: commandList.Array.data[3]
       value: 
       objectReference: {fileID: 623689395}
+    - target: {fileID: 2575820829142018822, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: key
+      value: ForceOut
+      objectReference: {fileID: 0}
     - target: {fileID: 2575820829142018820, guid: 40fd994b22d34cc42a27185d533e8477,
         type: 3}
       propertyPath: targetObject
       value: 
       objectReference: {fileID: 446889748}
+    - target: {fileID: 2575820829142018849, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: text
+      value: I have spoken to the leader, and he wants a meeting with you within a
+        week.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575820829142018854, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 97449586}
+    - target: {fileID: 2575820829142018666, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 1234435493}
+    - target: {fileID: 2575820829142018665, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 97449586}
+    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: nodeRect.width
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 325.6361
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 919.5264
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: commandList.Array.data[0]
+      value: 
+      objectReference: {fileID: 623689732}
+    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 623689448}
+    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: commandList.Array.data[2]
+      value: 
+      objectReference: {fileID: 623689731}
+    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: commandList.Array.data[3]
+      value: 
+      objectReference: {fileID: 623689623}
+    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: eventHandler
+      value: 
+      objectReference: {fileID: 623689589}
+    - target: {fileID: 2575820829142018945, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 507144080}
+    - target: {fileID: 2575820829142018963, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: text
+      value: Someone tried to kill me, but I managed to escape
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575820829142018962, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: text
+      value: My home was destroyed, I have nowhere to go
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575820829142018965, guid: 40fd994b22d34cc42a27185d533e8477,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 97449586}
     - target: {fileID: 2575820829142018826, guid: 40fd994b22d34cc42a27185d533e8477,
         type: 3}
       propertyPath: commandList.Array.size
@@ -47189,11 +47280,6 @@ PrefabInstance:
       propertyPath: commandList.Array.data[7]
       value: 
       objectReference: {fileID: 623689733}
-    - target: {fileID: 2575820829142018945, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: targetObject
-      value: 
-      objectReference: {fileID: 507144080}
     - target: {fileID: 2575820829142018608, guid: 40fd994b22d34cc42a27185d533e8477,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47319,11 +47405,6 @@ PrefabInstance:
       propertyPath: storyText
       value: I know, but I think I found someone that can help
       objectReference: {fileID: 0}
-    - target: {fileID: 2575820829142018965, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 97449586}
     - target: {fileID: 2575820829142018972, guid: 40fd994b22d34cc42a27185d533e8477,
         type: 3}
       propertyPath: character
@@ -47634,16 +47715,6 @@ PrefabInstance:
       propertyPath: targetObject
       value: 
       objectReference: {fileID: 798480825}
-    - target: {fileID: 2575820829142018665, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 97449586}
-    - target: {fileID: 2575820829142018666, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: targetObject
-      value: 
-      objectReference: {fileID: 1234435493}
     - target: {fileID: 2575820829142018830, guid: 40fd994b22d34cc42a27185d533e8477,
         type: 3}
       propertyPath: character
@@ -47722,11 +47793,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 97449586}
     - target: {fileID: 2575820829142018853, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 97449586}
-    - target: {fileID: 2575820829142018854, guid: 40fd994b22d34cc42a27185d533e8477,
         type: 3}
       propertyPath: character
       value: 
@@ -48251,11 +48317,6 @@ PrefabInstance:
       propertyPath: value
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2575820829142018822, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: key
-      value: ForceOut
-      objectReference: {fileID: 0}
     - target: {fileID: 2575820829142018606, guid: 40fd994b22d34cc42a27185d533e8477,
         type: 3}
       propertyPath: nodeRect.width
@@ -48381,51 +48442,6 @@ PrefabInstance:
       propertyPath: commandList.Array.data[7]
       value: 
       objectReference: {fileID: 623689559}
-    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: commandList.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: nodeRect.width
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: nodeRect.x
-      value: 325.6361
-      objectReference: {fileID: 0}
-    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: nodeRect.y
-      value: 919.5264
-      objectReference: {fileID: 0}
-    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: commandList.Array.data[0]
-      value: 
-      objectReference: {fileID: 623689732}
-    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: commandList.Array.data[1]
-      value: 
-      objectReference: {fileID: 623689448}
-    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: commandList.Array.data[2]
-      value: 
-      objectReference: {fileID: 623689731}
-    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: commandList.Array.data[3]
-      value: 
-      objectReference: {fileID: 623689623}
-    - target: {fileID: 2575820829142019021, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: eventHandler
-      value: 
-      objectReference: {fileID: 623689589}
     - target: {fileID: 2575820829142019022, guid: 40fd994b22d34cc42a27185d533e8477,
         type: 3}
       propertyPath: nodeRect.width
@@ -48747,16 +48763,6 @@ PrefabInstance:
       propertyPath: commandList.Array.data[17]
       value: 
       objectReference: {fileID: 623689599}
-    - target: {fileID: 2575820829142018962, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: text
-      value: My home was destroyed, I have nowhere to go
-      objectReference: {fileID: 0}
-    - target: {fileID: 2575820829142018963, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: text
-      value: Someone tried to kill me, but I managed to escape
-      objectReference: {fileID: 0}
     - target: {fileID: 2575820829142018667, guid: 40fd994b22d34cc42a27185d533e8477,
         type: 3}
       propertyPath: commandList.Array.size
@@ -48822,12 +48828,6 @@ PrefabInstance:
       propertyPath: commandList.Array.data[2]
       value: 
       objectReference: {fileID: 623689425}
-    - target: {fileID: 2575820829142018849, guid: 40fd994b22d34cc42a27185d533e8477,
-        type: 3}
-      propertyPath: text
-      value: I have spoken to the leader, and he wants a meeting with you within a
-        week.
-      objectReference: {fileID: 0}
     - target: {fileID: 2575820829142018870, guid: 40fd994b22d34cc42a27185d533e8477,
         type: 3}
       propertyPath: storyText

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5403443579510045499}
   - component: {fileID: 5403443579512945435}
   - component: {fileID: 5403443579511814619}
-  - component: {fileID: 7226870296080406132}
   - component: {fileID: 5915872055209726409}
   - component: {fileID: 2605595135473148676}
   m_Layer: 0
@@ -82,29 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7226870296080406132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5403443579509548827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a70d5be838d6d84ab2bd66baf99843d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapon: 4
-  bullet:
-  - {fileID: 828753613491779356, guid: e1982b5ce2357d54982b14b488c79af5, type: 3}
-  barrelEnd: {fileID: 6852551646157101195}
-  Smoke: {fileID: 7083640234172009345}
-  shotgunAnim: {fileID: 5915872055209726409}
-  ammoAmountUItext: {fileID: 0}
-  ammoAmmountUI: {fileID: 0}
-  ammoAmount: 1
-  player: {fileID: 0}
-  punchDist: 0
 --- !u!95 &5915872055209726409
 Animator:
   serializedVersion: 3
@@ -136,6 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24365f036a395f4f8bb6ca2b68e607d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackObject: {fileID: 0}
+  animator: {fileID: 0}
+  primaryDam: 0
+  secondaryDam: 0
 --- !u!1 &6852551646157101195
 GameObject:
   m_ObjectHideFlags: 0
