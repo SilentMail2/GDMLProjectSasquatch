@@ -20,9 +20,12 @@ public class Player_Control : MonoBehaviour
     [SerializeField] GameObject Diguise;
     public PlayerInventory playerInventory;
     [SerializeField] GameObject inventoryUI;
+    
     ChestOpen chestOpen;
     [Space(10)]
     [Header("Weapon")]
+    [SerializeField] bool melee;
+    [SerializeField] MeleeScript meleeScript;
     [SerializeField] private GameObject ObjectPool;
     [SerializeField] private GameObject weaponSpawn;
     [SerializeField] private GameObject[] weaponList;
@@ -388,4 +391,3 @@ public class Player_Control : MonoBehaviour
         Fungus.Flowchart.BroadcastFungusMessage("DisguiseOff");
     }
 }
-
