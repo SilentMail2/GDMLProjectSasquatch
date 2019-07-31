@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: f92fe35b26fe96e4f8c153d594486013
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Button
+    100002: ConverterBarrelB
+    100004: ConverterBarrelT
+    100006: Grip
+    100008: Handle1
+    100010: IronSights
+    100012: LaserCrystal
+    100014: LaserCrystalB
+    100016: LaserCrystalT
+    100018: Light
+    100020: //RootNode
+    100022: pCone1
+    100024: pCone2
+    100026: pCylinder6
+    100028: pCylinder7
+    100030: PowerBarrel
+    100032: Pummle
+    100034: SwitchLocation
+    100036: Trigger
+    100038: Wire
+    100040: WireConnector1
+    100042: WireConnector2
+    400000: Button
+    400002: ConverterBarrelB
+    400004: ConverterBarrelT
+    400006: Grip
+    400008: Handle1
+    400010: IronSights
+    400012: LaserCrystal
+    400014: LaserCrystalB
+    400016: LaserCrystalT
+    400018: Light
+    400020: //RootNode
+    400022: pCone1
+    400024: pCone2
+    400026: pCylinder6
+    400028: pCylinder7
+    400030: PowerBarrel
+    400032: Pummle
+    400034: SwitchLocation
+    400036: Trigger
+    400038: Wire
+    400040: WireConnector1
+    400042: WireConnector2
+    2100000: blinn11
+    2100002: blinn13
+    2100004: blinn12
+    2100006: blinn7
+    2100008: blinn10
+    2100010: blinn1
+    2100012: blinn2
+    2100014: blinn9
+    2100016: Handle
+    2300000: Button
+    2300002: ConverterBarrelB
+    2300004: ConverterBarrelT
+    2300006: Handle1
+    2300008: IronSights
+    2300010: Light
+    2300012: pCone1
+    2300014: pCone2
+    2300016: pCylinder6
+    2300018: pCylinder7
+    2300020: PowerBarrel
+    2300022: Pummle
+    2300024: SwitchLocation
+    2300026: Trigger
+    2300028: Wire
+    2300030: WireConnector1
+    2300032: WireConnector2
+    3300000: Button
+    3300002: ConverterBarrelB
+    3300004: ConverterBarrelT
+    3300006: Handle1
+    3300008: IronSights
+    3300010: Light
+    3300012: pCone1
+    3300014: pCone2
+    3300016: pCylinder6
+    3300018: pCylinder7
+    3300020: PowerBarrel
+    3300022: Pummle
+    3300024: SwitchLocation
+    3300026: Trigger
+    3300028: Wire
+    3300030: WireConnector1
+    3300032: WireConnector2
+    4300000: pCylinder7
+    4300002: pCone2
+    4300004: pCone1
+    4300006: pCylinder6
+    4300008: Trigger
+    4300010: Wire
+    4300012: WireConnector1
+    4300014: WireConnector2
+    4300016: IronSights
+    4300018: PowerBarrel
+    4300020: SwitchLocation
+    4300022: Light
+    4300024: ConverterBarrelT
+    4300026: ConverterBarrelB
+    4300028: Button
+    4300030: Pummle
+    4300032: Handle1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
