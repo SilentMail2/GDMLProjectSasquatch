@@ -24,11 +24,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507628155799275153}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.61, z: 0.84}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.0000000031203138, y: -0.00000028086296, z: -0.011109053,
+    w: -0.9999383}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.2763243, y: 1.2763243, z: 1.2763243}
   m_Children: []
-  m_Father: {fileID: 3855231596834488051}
+  m_Father: {fileID: 3135176260545050373}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &605139584
@@ -72,7 +73,7 @@ Transform:
   m_Children:
   - {fileID: 9161292096786613963}
   m_Father: {fileID: 3855231596834488051}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3135176260544752417
 GameObject:
@@ -162,7 +163,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0.00000028088027}
   m_LocalPosition: {x: -0.8839638, y: 5.6902204e-15, z: -2.6531843e-10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 340585776765831402}
   m_Father: {fileID: 3135176260545050425}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
@@ -753,7 +755,7 @@ Transform:
   m_Children:
   - {fileID: 3135176260545050423}
   m_Father: {fileID: 3855231596834488051}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &3135176260558349877
 SkinnedMeshRenderer:
@@ -943,7 +945,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 340585776765831402}
   - {fileID: 1928151406848086919}
   - {fileID: 5354966562749903040}
   - {fileID: 3135176260545050427}
@@ -1032,6 +1033,8 @@ MonoBehaviour:
   Diguise: {fileID: 1928151406848380839}
   playerInventory: {fileID: 1234435495}
   inventoryUI: {fileID: 0}
+  melee: 0
+  meleeScript: {fileID: 0}
   ObjectPool: {fileID: 0}
   weaponSpawn: {fileID: 507628155799275153}
   weaponList:
@@ -1341,7 +1344,7 @@ PrefabInstance:
     - target: {fileID: 7329018093691769210, guid: a11a0707c26e48446a45dbcba6c2b726,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7329018093691769210, guid: a11a0707c26e48446a45dbcba6c2b726,
         type: 3}
