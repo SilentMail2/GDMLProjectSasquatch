@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GunScript : MonoBehaviour
 {
-    enum weaponType { Shotgun, Handgun, autoMat, unarmed, spear}
+    enum weaponType { Shotgun, Handgun, autoMat, unarmed, spear, crossbow}
     [SerializeField] weaponType Weapon;
     [SerializeField] GameObject[] bullet;
     [SerializeField] GameObject barrelEnd;

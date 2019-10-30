@@ -53,7 +53,7 @@ public class Player_Control : MonoBehaviour
    
     private enum WeaponType
     {
-        Unarmed, Shotgun, Handgun, autoMat, Spear
+        Unarmed, Shotgun, Handgun, autoMat, Spear, crossbow
     }
     [SerializeField] private WeaponType weapon;
 
